@@ -38,7 +38,7 @@ function BoxCTA({ box }: { box: boxtype }) {
 	const colorBg = useMemo(() => {
 		if (box.color === '#1EA5AA') return 'hover:bg-[#1EA5AA]';
 		if (box.color === '#287DE4') return 'hover:bg-[#287DE4]';
-		return "hover:bg-[#FFC600]"
+		return 'hover:bg-[#FFC600]';
 	}, [box.color]);
 
 	return (
@@ -48,8 +48,9 @@ function BoxCTA({ box }: { box: boxtype }) {
 			<div className="svg w-full max-w-[220px]">{box.svg}</div>
 			<div className="text mt-14">
 				<span className="">{box.name}</span>
-				<p className="hidden xl:group-hover:block transition-all duration-300 mt-4">{box.description}</p>
+				<p className="hidden xl:group-hover:block mt-4">{box.description}</p>
 			</div>
+			{/* //TODO - Changer bg et text pour valeurs dynamiques Tailwind */}
 			<div className={`mt-6 text-white group-hover:text-[${box.color}]`}>
 				<Link href={box.path} className="block border border-white rounded-full p-2 group-hover:p-6 group-hover:rotate-90 transition-all duration-300">
 					<ArrowRight height={20} />
