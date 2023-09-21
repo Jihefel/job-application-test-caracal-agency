@@ -11,6 +11,11 @@ const haptik = localFont({
       style: "normal",
     },
     {
+      path: "../../public/fonts/GT-Haptik-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
       path: "../../public/fonts/GT-Haptik-Bold.ttf",
       weight: "700",
       style: "normal",
@@ -36,7 +41,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={`${inter.variable} ${haptik.variable} font-haptik bg-red-400`}>
+      <body className={`${inter.variable} ${haptik.variable} font-haptik`}>
         <Navbar />
         {children}
       </body>
